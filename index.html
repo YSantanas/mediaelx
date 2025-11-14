@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmobiliaria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+<header class="border-bottom seccion-oscura">
+    <!-- TOP INFO: se oculta en móvil -->
+    <div class="container-fluid px-4 py-2 d-none d-md-flex justify-content-between align-items-center seccion-oscura text-white">
+        <div class="left-info">
+            <span class="me-3"><i class="bi bi-telephone"></i> +34 600 123 456</span>
+        </div>
+        <div class="center-logo text-center flex-grow-1">
+            <img src="./img/logo_header.svg" alt="Logo" style="height: 50px;">
+        </div>
+        <div class="right-info text-end">
+            <span class="me-2"><i class="bi bi-envelope"></i> contacto@empresa.com</span>
+            <span class="right-icons">
+                <img src="./img/eng_flag.svg" alt="EN" style="height: 20px;">
+                <i class="bi bi-facebook"></i>
+            </span>
+        </div>
+    </div>
+
+    <!-- NAV / ACCIONES -->
+    <div class="container-fluid px-4 py-2 d-flex justify-content-between align-items-center seccion-oscura text-white">
+        <!-- Botón hamburguesa visible solo en móvil -->
+        <div class="menu-mobile d-md-none">
+            <button class="btn btn-outline-dark" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+
+        <!-- Logo centrado -->
+        <div class="center-logo text-center flex-grow-1 d-md-none">
+            <img src="./img/logo_header.svg" alt="Logo" style="height: 50px;">
+        </div>
+
+        <!-- Nav principal visible solo en desktop -->
+        <nav class="nav-left d-none d-md-flex">
+            <a href="#">Inicio</a>
+            <a href="#">Propiedades</a>
+            <a href="#">Vender</a>
+        </nav>
+
+        <!-- Acciones de header -->
+        <div class="d-flex align-items-center header-actions">
+            <!-- Corazón siempre visible -->
+            <div class="corazon me-2"><i class="bi bi-heart-fill"></i></div>
+
+            <!-- Contactar: solo desktop -->
+            <span class="contactar-text me-3 d-none d-md-inline">Contactar</span>
+
+            <!-- Botón hamburguesa (desktop puede estar oculto) -->
+            <button class="btn btn-outline-dark align-items-center btn-hamburguesa-derecha d-none d-md-inline">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+    <!-- MENÚ LATERAL -->
+    <div class="offcanvas offcanvas-start seccion-oscura" tabindex="-1" id="menuOffcanvas">
+        <div class="offcanvas-header">
+            
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body text-white">
+            <a href="#">Inicio</a>
+            <a href="#">Propiedades</a>
+            <a href="#">Vender</a>
+            <a href="#">Contactar</a>
+        </div>
+    </div>
+
+    <!-- IMAGEN PRINCIPAL -->
+    <section class="fondo-inicial">
+        <h1>INMO VALLEY</h1>
+        <h2>Siempre a tu lado</h2>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="filtros text-center seccion-oscura">
+        <div class="container">
+            <!-- Wrapper centrado: alinea a la izquierda dentro -->
+            <div class="d-flex justify-content-center">
+                <div class="filtros-rail">
+
+                    <!-- FILA DE SELECTS (sin justify-content-center) -->
+                    <div class="row g-0 gx-lg-0 gy-2 gy-lg-0 filtros-row mb-3">
+                        <!-- Primer select: 100% en móvil -->
+                        <div class="col-12 col-lg-auto">
+                            <select class="form-select w-100">
+                                <option>Tipo de Propiedad</option>
+                            </select>
+                        </div>
+
+                        <!-- Resto de selects: 50% en móvil -->
+                        <div class="col-6 col-lg-auto">
+                            <select class="form-select w-100">
+                                <option>Ubicación</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-lg-auto">
+                            <select class="form-select w-100">
+                                <option>Precio Mínimo</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-lg-auto">
+                            <select class="form-select w-100">
+                                <option>Precio Máximo</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-lg-auto">
+                            <select class="form-select w-100">
+                                <option>Habitaciones</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-lg-auto">
+                            <select class="form-select w-100">
+                                <option>Baños</option>
+                            </select>
+                        </div>
+
+                        <!-- Botón buscar: 50% en móvil -->
+                        <div class="col-6 col-lg-auto">
+                            <button class="btn btn-search w-100">
+                                <i class="bi bi-search me-2"></i> Buscar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- FILA DE BOTONES (arranca exactamente donde el primer select) -->
+                    <div class="row g-0 gx-lg-0 gy-2 gy-lg-0 filtros-botones">
+                        <div class="col-6 col-lg-auto">
+                            <button class="btn-oscuro w-100">
+                                <i class="bi bi-eraser me-1"></i> Limpiar filtros
+                            </button>
+                        </div>
+                        <div class="col-6 col-lg-auto">
+                            <button class="btn-dorado w-100">
+                                <i class="bi bi-funnel me-1"></i> Búsqueda avanzada
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-5 fondo-propiedades">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Columna 1 -->
+                <div class="col-12 col-md-4">
+                    <div class="contenedor-rectangulos">
+                        <div class="rectangulo rect-arriba"></div>
+                        <div class="rectangulo rect-grande">
+                            <h3 class="titulo-rectangulo">Pisos en Elche</h3>
+                            <p class="propiedades-rectangulo">20 propiedades</p>
+                        </div>
+                        <div class="rectangulo rect-abajo"></div>
+                    </div>
+                </div>
+
+                <!-- Columna 2 -->
+                <div class="col-12 col-md-4">
+                    <div class="contenedor-rectangulos">
+                        <div class="rectangulo rect-arriba"></div>
+                        <div class="rectangulo rect-grande">
+                            <h3 class="titulo-rectangulo">Chalets en Elche</h3>
+                            <p class="propiedades-rectangulo">43 propiedades</p>
+                        </div>
+                        <div class="rectangulo rect-abajo"></div>
+                    </div>
+                </div>
+
+                <!-- Columna 3 -->
+                <div class="col-12 col-md-4">
+                    <div class="contenedor-rectangulos">
+                        <div class="rectangulo rect-arriba"></div>
+                        <div class="rectangulo rect-grande">
+                            <h3 class="titulo-rectangulo">Apartamentos Santa Paola</h3>
+                            <p class="propiedades-rectangulo">36 propiedades</p>
+                        </div>
+                        <div class="rectangulo rect-abajo"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="py-5 fondo-medio text-white">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+
+                <!-- Columna Izquierda (Imagen) -->
+                <div class="col-12 col-md-7">
+                    <img src="./img/property_month.jpg" class="img-fluid rounded" alt="Imagen propiedad">
+                </div>
+
+                <!-- Columna Derecha (Caja gris) -->
+                <div class="col-12 col-md-5">
+                    <div class="caja-propiedad pt-3">
+
+                        <!-- Referencia + corazón (con fondo dorado completo) -->
+                        <div class="referencia-linea">
+                            <div class="referencia">REF-9021</div>
+                            <div class="corazon"><i class="bi bi-heart-fill"></i></div>
+                        </div>
+
+                        <!-- Contenido con padding -->
+                        <div class="contenido-propiedad">
+                            <!-- Título -->
+                            <h2 class="titulo-prop text-start mt-3">Piso</h2>
+
+                            <!-- Subtítulo -->
+                            <h4 class="subtitulo-prop text-start">Obra nueva</h4>
+
+                            <!-- Ubicación -->
+                            <p class="ubicacion mt-2">Madrid, Barrio Salamanca</p>
+
+                            <!-- Características -->
+                            <p class="caracteristicas">
+                                200 m² construidos<br>
+                                3 habitaciones<br>
+                                3 baños<br>
+                                Piscina
+                            </p>
+
+                            <!-- Precio -->
+                            <div class="precio">270.000 €</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- SEGUNDO CONTENEDOR -->
+        <div class="d-flex justify-content-center mb-5 mt-5">
+            <div class="row g-4" style="max-width: 1200px; width: 100%; ">
+
+                <!-- Columna izquierda (logo + texto + botón) -->
+                <div class="col-12 col-md-6 text-center text-md-start mb-4">
+                    <img src="./img/icon_2.svg" class="logo-vender mb-3" alt="Logo">
+                    <h3>Vende tu propiedad con nosotros</h3>
+                    <button class="btn btn-dorado2 mt-3">Quiero vender</button>
+                </div>
+
+                <!-- Columna derecha (imagen cuadrada) -->
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                    <img src="./img/image_sell.jpg" class="img-fluid cuadrada" alt="Publicidad">
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+
+    <!-- SECCIÓN DE TARJETAS -->
+    <section class="py-5 seccion-tarjetas">
+        <div class="container">
+            <!-- Título de la sección -->
+            <h2 class="mb-4 text-center">Nuestras Propiedades Destacadas</h2>
+
+            <div class="row g-4">
+                <!-- Primera columna -->
+                <div class="col-12 col-md-6">
+                    <!-- Card 1 como enlace -->
+                    <a href="#propiedad1" class="card-enlace text-decoration-none">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="./img/property_1.jpg" class="card-img-top" alt="Propiedad 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Propiedad 1</h5>
+                                <p class="card-text">Descripción breve de la propiedad 1.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 2 como enlace -->
+                    <a href="#propiedad2" class="card-enlace text-decoration-none">
+                        <div class="card shadow-sm">
+                            <img src="./img/property_2.jpg" class="card-img-top" alt="Propiedad 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Propiedad 2</h5>
+                                <p class="card-text">Descripción breve de la propiedad 2.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Segunda columna -->
+                <div class="col-12 col-md-6">
+                    <!-- Card 3 como enlace -->
+                    <a href="#propiedad3" class="card-enlace text-decoration-none">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="./img/property_3.jpg" class="card-img-top" alt="Propiedad 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Propiedad 3</h5>
+                                <p class="card-text">Descripción breve de la propiedad 3.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 4 como enlace -->
+                    <a href="#propiedad4" class="card-enlace text-decoration-none">
+                        <div class="card shadow-sm">
+                            <img src="./img/property_3.jpg" class="card-img-top" alt="Propiedad 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Propiedad 4</h5>
+                                <p class="card-text">Descripción breve de la propiedad 4.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTÓN INFERIOR VER TODAS -->
+        <div class="row mt-4 ver-todas">
+            <div class="col-12 d-flex justify-content-center">
+                <a href="#todas-las-propiedades" class="d-flex align-items-center">
+                    <span class="me-2 fs-5">Ver todas las propiedades</span>
+                    <span class="rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="bi bi-plus"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+
+        </div> <!-- Cierre del container -->
+    </section>
+
+
+    <!-- SECCIÓN SOBRE NOSOTROS -->
+    <section class="py-5 seccion-oscura">
+        <div class="container-fluid px-0"> <!-- contenedor sin padding lateral -->
+            <div class="row align-items-stretch g-0"> <!-- g-0 elimina el gutter para que llegue al borde -->
+
+                <!-- Columna izquierda: imagen más ancha -->
+                <div class="col-12 col-md-5 d-flex">
+                    <img src="./img/imagensobre.jpg" class="img-fluid w-100 h-100" style="object-fit: fill;"
+                        alt="Nosotros 1">
+                </div>
+
+                <!-- Columna central: contenido -->
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-center text-center px-4">
+                    <img src="./img/icon_2.svg" alt="Logo" style="height: 60px;" class="mb-3">
+                    <h3 class="mb-3">Sobre Nosotros</h3>
+                    <p class="mb-4">Somos una empresa dedicada a ofrecer las mejores propiedades del mercado...</p>
+                    <button class="btn btn-dorado">Más sobre nosotros</button>
+                </div>
+
+                <!-- Columna derecha: imagen más estrecha -->
+                <div class="col-12 col-md-3 d-flex">
+                    <img src="./img/imagensobre2.jpg" class="img-fluid w-100 h-100" style="object-fit: fill;"
+                        alt="Nosotros 2">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECCIÓN BLOG/NOTICIAS -->
+    <section class="py-5 bg-light section-noticias">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Columna 1: Texto vertical + botón -->
+                <div class="col-12 col-md-3 d-flex flex-column align-items-center justify-content-center">
+                    <h3 class="mb-4"
+                        style="writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); font-size: 2.5rem;">
+                        NOTICIAS
+                    </h3>
+                    <button class="btn btn-dorado rounded-circle" style="width: 50px; height: 50px;">
+                        <i class="bi bi-plus fs-4"></i>
+                    </button>
+                </div>
+
+                <!-- Columna 2: Primera imagen con fecha y texto -->
+                <div class="col-12 col-md-4">
+                    <div class="position-relative">
+                        <img src="./img/mews_1.jpg" class="img-fluid rounded" alt="Noticia 1">
+                        <span class="position-absolute top-0 start-0 bg-white text-dark px-3 py-2 m-3 fw-bold">
+                            15 ENE
+                        </span>
+                    </div>
+                    <p class="mt-3 fw-bold">Título de la noticia o artículo del blog número uno</p>
+                </div>
+
+                <!-- Columna 3: Segunda imagen con fecha y texto -->
+                <div class="col-12 col-md-4">
+                    <div class="position-relative">
+                        <img src="./img/news_2.jpg" class="img-fluid rounded" alt="Noticia 2">
+                        <span class="position-absolute top-0 start-0 bg-white text-dark px-3 py-2 m-3 fw-bold">
+                            22 ENE
+                        </span>
+                    </div>
+                    <p class="mt-3 fw-bold">Título de la segunda noticia o artículo destacado del blog</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- IMAGEN COMPLETA -->
+    <section class="fondo-final w-100"></section>
+
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section class="py-5" style="background-color: #978511;">
+        <div class="container">
+            <h2 class="text-center text-white mb-4">Contacta con nosotros</h2>
+
+            <form class="mx-auto formulario-contacto">
+                <!-- Nombre completo -->
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Nombre completo">
+                </div>
+
+                <!-- Teléfono y Correo -->
+                <div class="row mb-3 g-2">
+                    <div class="col-12 col-md-6">
+                        <input type="tel" class="form-control" placeholder="Teléfono">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <input type="email" class="form-control" placeholder="Correo electrónico">
+                    </div>
+                </div>
+
+                <!-- Mensaje -->
+                <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Mensaje"></textarea>
+                </div>
+
+                <!-- Checkbox -->
+                <div class="mb-3 form-check text-white">
+                    <input class="form-check-input" type="checkbox" id="checkContacto">
+                    <label class="form-check-label" for="checkContacto">
+                        Marque esta casilla para ponerse en contacto
+                    </label>
+                </div>
+
+                <!-- Botón Enviar -->
+                <div class="text-center mb-3">
+                    <button type="submit" class="btn btn-oscuro px-4 py-2">Enviar</button>
+                </div>
+
+                <!-- Leyenda RGPD -->
+                <p class="text-white small text-center mb-0">
+                    Responsable del tratamiento: INMOBILIARIA S.L. | Finalidad: Gestión de consultas y solicitudes.
+                    Puede ejercer sus derechos enviando un correo a contacto@empresa.com
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER SUPERIOR (fondo oscuro) -->
+    <footer class="py-5 text-white" style="background-color: #363636;">
+        <div class="container text-center">
+
+            <!-- Logo -->
+            <div class="mb-3">
+                <img src="./img/logo_header.svg" alt="Logo" style="height: 60px;">
+            </div>
+
+            <!-- Teléfono y correo -->
+            <div class="mb-3">
+                <p class="mb-1"><i class="bi bi-telephone me-2"></i> +34 600 123 456</p>
+                <p><i class="bi bi-envelope me-2"></i> contacto@empresa.com</p>
+            </div>
+
+            <!-- Menú de navegación -->
+            <nav class="mb-3">
+                <a href="#" class="text-white text-decoration-none mx-2">Inicio</a>
+                <a href="#" class="text-white text-decoration-none mx-2">Empresa</a>
+                <a href="#" class="text-white text-decoration-none mx-2">Propiedades</a>
+                <a href="#" class="text-white text-decoration-none mx-2">Servicios</a>
+                <a href="#" class="text-white text-decoration-none mx-2">Vender</a>
+                <a href="#" class="text-white text-decoration-none mx-2">Contactar</a>
+            </nav>
+
+            <!-- Iconos de corazón, idioma y redes sociales -->
+            <div class="d-flex justify-content-center align-items-center gap-3 mb-3">
+                <!-- Corazón dorado -->
+                <i class="bi bi-heart-fill" style="color: #d4af37; font-size: 1.3rem;"></i>
+
+                <!-- Idioma con flecha -->
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-chevron-left me-2"></i>
+                    <img src="./img/eng_flag.svg" alt="EN" style="height: 20px;">
+                </div>
+
+                <!-- Facebook -->
+                <i class="bi bi-facebook" style="font-size: 1.3rem;"></i>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- FOOTER INFERIOR (fondo dorado) -->
+    <footer class="py-3 text-dark" style="background-color: #978511; color:white !important;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <small>&copy; 2024 Inmobiliaria. Todos los derechos reservados.</small>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end">
+                    <small>Diseñado: <strong>MEDIAELX</strong></small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

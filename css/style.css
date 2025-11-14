@@ -1,0 +1,625 @@
+/* Línea superior del header */
+.top-info {
+  font-size: 0.9rem;
+  background-color: #f8f9fa;
+}
+
+/* Fondo body */
+.body {
+  background-color: #191e25 !important;
+  color: white !important;
+}
+
+/* Fondo oscuro global para secciones */
+.seccion-oscura {
+  background-color: #191e25 !important;
+  color: white !important;
+}
+
+/* Tarjetas en secciones oscuras */
+.seccion-oscura .card,
+.seccion-oscura .bg-white {
+  background-color: #191e25 !important;
+  color: white;
+}
+
+.seccion-oscura h1,
+.seccion-oscura h2,
+.seccion-oscura h3,
+.seccion-oscura h4,
+.seccion-oscura h5,
+.seccion-oscura h6,
+.seccion-oscura p {
+  color: white !important;
+}
+
+/* Links del navbar */
+.nav-left a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+/* Iconos y botones a la derecha */
+.right-icons i {
+  font-size: 1.2rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Sección de filtros */
+.filtros {
+  background-color: #f9f9f9;
+  padding: 30px 20px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Quitar border-radius de selects desktop */
+.filtros-row select {
+  border-radius: 0;
+  border-right: none;
+}
+
+.filtros-row select:first-child {
+  border-radius: 0.375rem 0 0 0.375rem;
+}
+
+.btn-search {
+  color: white;
+  background-color: #d5bd01ff;
+}
+
+.btn-search:hover {
+  color: white;
+  background-color: #978511;
+}
+
+.filtros-row .btn-search {
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+/* Botones personalizados */
+.btn-oscuro {
+  background-color: #363636;
+  color: white;
+  border-radius: 0;
+  border-color: transparent;
+  font-size: large;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.btn-oscuro:hover {
+  background-color: #494949;
+  color: white;
+}
+
+.btn-dorado {
+  background-color: #978511;
+  color: white;
+  border-radius: 0;
+  border-color: transparent;
+  font-size: large;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.btn-dorado:hover {
+  background-color: rgb(163, 144, 85);
+  color: white;
+}
+
+.btn-dorado2 {
+  background-color: #978511;
+  color: white;
+  border-radius: 0;
+  border-color: transparent;
+  font-size: large;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.btn-dorado2:hover {
+  background-color: rgb(163, 144, 85);
+  color: white;
+}
+
+/* Botón hamburguesa derecha - oculto por defecto en móvil */
+.btn-hamburguesa-derecha {
+  display: none;
+}
+
+/* ICONO HAMBURGUESA EN BLANCO */
+.menu-mobile i,
+.btn-hamburguesa-derecha i {
+  color: white !important;
+  font-size: 1.5rem;
+}
+
+/* Borde del botón hamburguesa */
+.menu-mobile .btn,
+.btn-hamburguesa-derecha {
+  border-color: white !important;
+  background: transparent !important;
+}
+
+/* Icono de cerrar en blanco (offcanvas) */
+.btn-close {
+  filter: invert(1) brightness(200%);
+}
+
+/* Quitar border-radius */
+.filtros-row select,
+.filtros-row .btn-search,
+.filtros-botones .btn-oscuro,
+.filtros-botones .btn-dorado {
+  border-radius: 0 !important;
+}
+
+.fondo-inicial {
+  background-image: url("../img/slider.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Título superpuesto */
+.fondo-inicial h1 {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-80%);
+  color: white;
+  font-size: 5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Título superpuesto */
+.fondo-inicial h2 {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateY(80%);
+  color: #978511;
+  font-weight: bold;
+  font-size: 2.00rem;
+  text-shadow: 2px 2px 3px rgba(224, 224, 224, 0.79);
+}
+
+.fondo-propiedades {
+  background-image: url("../img/image_banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.fondo-medio {
+  background-image: url("../img/image_background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Contenedor con posición relativa */
+.contenedor-rectangulos {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+/* Base para todos los rectángulos */
+.rectangulo {
+  position: absolute;
+  border-radius: 0px;
+}
+
+/* Rectángulo superior amarillo - pequeño vertical */
+.rect-arriba {
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 30%;
+  background-color: #d4af37;
+  z-index: 2;
+  transition: background-color 0.3s;
+}
+
+/* Rectángulo grande azul marino - fondo vertical */
+.rect-grande {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #191e25;
+  z-index: 1;
+  padding: 20px 20px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+/* Título en la parte superior del rectángulo grande */
+.titulo-rectangulo {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: left;
+  position: relative;
+  z-index: 4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Número de propiedades en la parte inferior */
+.propiedades-rectangulo {
+  margin: 0;
+  font-size: 1rem;
+  text-align: left;
+  position: relative;
+  z-index: 4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Rectángulo inferior gris - pequeño vertical */
+.rect-abajo {
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 30%;
+  background-color: #6c757d;
+  z-index: 2;
+}
+
+/* Hover en el contenedor */
+.contenedor-rectangulos:hover .rect-grande {
+  background-color: #d4af37;
+}
+
+.contenedor-rectangulos:hover .rect-arriba {
+  background-color: #191e25;
+}
+
+.fondo-final {
+  background-image: url("../img/final_background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Contenedor uniforme para las noticias */
+.section-noticias .noticia-img {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.section-noticias .noticia-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 0.5rem;
+}
+
+/* Fondo oscuro global para secciones */
+.seccion-tarjetas {
+  background-color: #181d24 !important;
+  color: white !important;
+}
+
+/* Cards dentro de secciones */
+.seccion-tarjetas .card,
+.seccion-tarjetas .bg-white {
+  background-color: #191e25 !important;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+/* Hover dorado en toda la card */
+.seccion-tarjetas .card:hover {
+  background-color: #bba048 !important;
+  color: white;
+}
+
+/* Cambiar color del título y texto al hover */
+.seccion-tarjetas .card:hover h5,
+.seccion-tarjetas .card:hover p {
+  color: white;
+}
+
+/* Botón inferior "Ver todas" dorado con contorno */
+.ver-todas a {
+  color: #d4af37;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.ver-todas a:hover {
+  color: #c39d2a;
+}
+
+.ver-todas a span.rounded-circle {
+  background-color: transparent;
+  color: #d4af37;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #d4af37;
+  transition: border-color 0.3s, color 0.3s;
+  border-radius: 50%;
+}
+
+.ver-todas a:hover span.rounded-circle {
+  border-color: #c39d2a;
+  color: #c39d2a;
+}
+
+/* ========================================
+   CAJA PROPIEDAD - BASE
+   ======================================== */
+.caja-propiedad {
+  background-color: #3d4247;
+  border-radius: 0px;
+  padding: 0;
+  position: relative;
+  z-index: 5;
+  transition: background-color 0.3s ease;
+}
+
+/* Línea con referencia + corazón */
+.referencia-linea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+/* Fondo dorado desde el borde izquierdo hasta el final del texto */
+.referencia {
+  background-color: #d4af37;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  padding: 10px 15px;
+  display: inline-block;
+  margin: 0;
+}
+
+/* Corazón dorado - separado */
+.corazon {
+  font-size: 20px;
+  color: #978511;
+  padding: 10px 20px;
+}
+
+/* Contenido interno con padding */
+.contenido-propiedad {
+  padding: 20px;
+}
+
+/* Precio dorado */
+.precio {
+  font-size: 22px;
+  font-weight: bold;
+  color: #d4af37;
+  margin-top: 15px;
+}
+
+/* Estilos de textos */
+.titulo-prop,
+.subtitulo-prop {
+  color: white;
+}
+
+.ubicacion,
+.caracteristicas {
+  color: #e5e5e5;
+}
+
+.texto- {
+  color: white; /* texto blanco */
+  font-weight: bold; /* negrita */
+  cursor: pointer; /* cursor tipo puntero */
+  text-decoration: none; /* sin subrayado */
+  font-size: 1rem; /* tamaño normal, ajustable */
+}
+
+.formulario-contacto {
+  max-width: 600px; /* limita el ancho total */
+  margin: 0 auto; /* centrado horizontal */
+}
+
+.formulario-contacto .form-control {
+  border-radius: 0;
+  padding: 0.4rem 0.75rem; /* inputs más compactos */
+}
+
+.formulario-contacto textarea.form-control {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+.formulario-contacto .btn-oscuro {
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+/* ========================================
+   MEDIA QUERIES
+   ======================================== */
+
+/* Desktop */
+@media (min-width: 993px) {
+  .menu-mobile {
+    display: none;
+  }
+
+  .btn-hamburguesa-derecha {
+    display: flex !important;
+  }
+
+  .filtros-botones {
+    border-radius: 0 !important;
+  }
+}
+
+/* SOLO en desktop: efecto de desplazamiento */
+@media (min-width: 768px) {
+  .caja-propiedad {
+    transform: translateX(-80px);
+    transition: transform 0.6s ease, background-color 0.3s ease,
+      opacity 0.6s ease;
+  }
+
+  .caja-propiedad:hover {
+    background-color: #191e25;
+    transform: translateX(-10px);
+    opacity: 1;
+  }
+}
+
+/* Tablet y Mobile */
+@media (max-width: 992px) {
+  .nav-left {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: flex;
+    align-items: center;
+    order: 1;
+  }
+
+  .offcanvas-body a {
+    display: block;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .offcanvas-body a:hover {
+    color: #d4af37;
+  }
+
+  .header-actions {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .btn-hamburguesa-derecha {
+    display: none !important;
+  }
+
+  .center-logo {
+    order: 2;
+  }
+
+  .right-info {
+    order: 3;
+  }
+
+  /* Selects mobile */
+  .filtros-row > div:nth-child(1) select {
+    border-radius: 0.375rem !important;
+    border-right: 1px solid #ced4da;
+  }
+
+  .filtros-row > div:nth-child(2) select,
+  .filtros-row > div:nth-child(3) select,
+  .filtros-row > div:nth-child(4) select,
+  .filtros-row > div:nth-child(5) select,
+  .filtros-row > div:nth-child(6) select {
+    border-radius: 0.375rem !important;
+    border-right: 1px solid #ced4da;
+  }
+
+  .filtros-row .btn-search {
+    border-radius: 0.375rem !important;
+  }
+
+  .btn-oscuro,
+  .btn-dorado {
+    border-radius: 0.375rem !important;
+  }
+
+  /* Caja propiedad sin desplazamiento en móvil */
+  .caja-propiedad {
+    transform: none !important;
+    margin-top: 20px;
+  }
+
+  .caja-propiedad:hover {
+    background-color: #191e25;
+  }
+}
+
+/* Mobile pequeño - ajustes adicionales */
+@media (max-width: 767px) {
+  .caja-propiedad {
+    transform: none !important;
+    margin-top: 20px;
+  }
+
+  .referencia {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .titulo-prop {
+    font-size: 1.5rem;
+  }
+
+  .subtitulo-prop {
+    font-size: 1.2rem;
+  }
+
+  .precio {
+    font-size: 20px;
+  }
+
+  .contenido-propiedad {
+    padding: 15px;
+  }
+
+  .corazon {
+    padding: 10px 15px;
+  }
+}
+
+/* Extra pequeño */
+@media (max-width: 576px) {
+  .referencia {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .contenido-propiedad {
+    padding: 12px;
+  }
+
+  .precio {
+    font-size: 18px;
+  }
+}
