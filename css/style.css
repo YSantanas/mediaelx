@@ -1,8 +1,3 @@
-/* Línea superior del header */
-.top-info {
-  font-size: 0.9rem;
-  background-color: #f8f9fa;
-}
 
 /* Fondo body */
 .body {
@@ -163,8 +158,7 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  padding-top: 60px;
-  padding-bottom: 60px;
+
 }
 
 /* Título superpuesto */
@@ -335,7 +329,7 @@
 
 /* Hover dorado en toda la card */
 .seccion-tarjetas .card:hover {
-  background-color: #bba048 !important;
+  background-color: #978511 !important;
   color: white;
 }
 
